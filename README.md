@@ -4,7 +4,8 @@ This project contains the Entity Relationship Diagram (ERD) for an **Order Manag
 
 ## 📌 Project Objective
 
-To demonstrate understanding of database design principles and relational data modeling by creating a real-life ERD based on business rules.
+To demonstrate understanding of database design principles and relational data modeling by creating a real-life Entity Relationship Diagram (ERD) based on business rules, and developing its corresponding SQL schema to define the actual database structure.
+
 
 ## 🗂️ ERD Diagram
 
