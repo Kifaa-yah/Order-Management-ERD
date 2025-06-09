@@ -34,67 +34,7 @@ The following SQL schema defines the structure of the Order Management System da
 
 
 📝 SQL Script
-[View SQL Script 
-
--- Customers Table
-CREATE TABLE Customers (
-    CustomerID INT PRIMARY KEY,
-    Name VARCHAR(100) NOT NULL,
-    Address VARCHAR(200),
-    Gender VARCHAR(10)
-);
-
--- Products Table
-CREATE TABLE Products (
-    ProductID INT PRIMARY KEY,
-    ProductName VARCHAR(100) NOT NULL,
-    Price DECIMAL(10, 2) NOT NULL
-);
-
--- Suppliers Table
-CREATE TABLE Suppliers (
-    SupplierID INT PRIMARY KEY,
-    SupplierName VARCHAR(100) NOT NULL,
-    Location VARCHAR(150)
-);
-
--- Components Table
-CREATE TABLE Components (
-    ComponentID INT PRIMARY KEY,
-    ComponentName VARCHAR(100) NOT NULL,
-    SupplierID INT,
-    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
-);
-
--- ProductComponents Table (Associative Entity for Many-to-Many Relationship between Products and Components)
-CREATE TABLE ProductComponents (
-    ProductID INT,
-    ComponentID INT,
-    PRIMARY KEY (ProductID, ComponentID),
-    FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
-    FOREIGN KEY (ComponentID) REFERENCES Components(ComponentID)
-);
-
--- Orders Table
-CREATE TABLE Orders (
-    OrderID INT PRIMARY KEY,
-    CustomerID INT,
-    OrderDate DATE NOT NULL,
-    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
-);
-
--- OrderItems Table (to normalize Product-Order relationship)
-CREATE TABLE OrderItems (
-    OrderID INT,
-    ProductID INT,
-    Quantity INT DEFAULT 1,
-    PRIMARY KEY (OrderID, ProductID),
-    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
-);
-ng Order Management Schema.sql…]()
-
-
+[View SQL Script] 
 
 
 ## 📄 Future Improvements
