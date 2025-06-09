@@ -20,10 +20,14 @@ To demonstrate understanding of database design principles and relational data m
 - Payment status is tracked for each order.
 
 
-🗄️ SQL Schema
+## 🗄️ SQL Schema
+
 The following SQL schema defines the structure of the Order Management System database. It includes tables for managing customers, suppliers, items, orders, and payment statuses.
 
-📌 Schema Overview
+
+
+### 📌 Schema Overview
+
 | Table          | Description                       |
 |----------------|-----------------------------------|
 | `Customers`    | Stores customer details           |
@@ -33,14 +37,19 @@ The following SQL schema defines the structure of the Order Management System da
 | `PaymentStatus`| Tracks payment progress/status    |
 
 
-📝 SQL Script
-[View SQL Script] 
+
+
+### 📝 SQL Script
+
+📄 [Download SQL Schema](./sql/order_management_schema.sql)
+
+
+
 
 
 ## 📄 Future Improvements
 - Create normalized `OrderItems` table for Many-to-Many relationships.
 - Populate with sample data for SQL practice.
-- Design corresponding SQL schema.
 
 ## 📚 License
 
